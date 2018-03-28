@@ -13,15 +13,21 @@
 
     <script type="text/babel">
        class Memphis extends React.Component {
+       constructor(props){
+           super(props);
+           this.state = {
+             hours: 62
+           }
+         }
          render() {
            return (
              <div>
-               <h2>Hola from beautiful Memphis, TN!</h2>
+               <h1>Hola from beautiful Memphis, TN!</h1>
+                <h2>Hours til I get to Relax: {this.state.hours}</h2>
              </div>
            );
          }
        }
-
        ReactDOM.render(
          <Memphis />, document.getElementById('app')
        );
